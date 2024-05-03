@@ -1,0 +1,64 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@opensdks/sdk-openint':
+    specifier: ^0.0.2
+    version: 0.0.2(@opensdks/runtime@0.0.19)
+  typescript:
+    specifier: ^5.4.5
+    version: 5.4.5
+
+packages:
+
+  /@opensdks/fetch-links@0.0.18:
+    resolution: {integrity: sha512-EhBj92wLXoj3pF4ERxzoEhAlwlefIzQ31At0zaksSbA9zqMlod9DyfypQRX/6J8w4iZzraV33BtFEk7l98nsLA==}
+    dev: false
+
+  /@opensdks/runtime@0.0.19:
+    resolution: {integrity: sha512-9rPrPDHS+PRVKOWXbdYEtys/4uHeVzitQgR0QVSWtMFOn6FOY8VxMGvem0TGJwHf4EPecejoWF8NuNwUATmbeA==}
+    dependencies:
+      '@opensdks/fetch-links': 0.0.18
+      openapi-fetch: 0.8.1
+      openapi-typescript-helpers: 0.0.4
+      openapi3-ts: 4.1.2
+    dev: false
+
+  /@opensdks/sdk-openint@0.0.2(@opensdks/runtime@0.0.19):
+    resolution: {integrity: sha512-IfwQHtLnqoe2p8MDyC1Rou9bQZUvmkqFqtsJdoxITePcwDiu098lIm1IQjKnDLoKH606HSS95GmSpXR9m6cSkw==}
+    peerDependencies:
+      '@opensdks/runtime': 0.0.19
+    dependencies:
+      '@opensdks/runtime': 0.0.19
+    dev: false
+
+  /openapi-fetch@0.8.1:
+    resolution: {integrity: sha512-xmzMaBCydPTMd0TKy4P2DYx/JOe9yjXtPIky1n1GV7nJJdZ3IZgSHvAWVbe06WsPD8EreR7E97IAiskPr6sa2g==}
+    dependencies:
+      openapi-typescript-helpers: 0.0.4
+    dev: false
+
+  /openapi-typescript-helpers@0.0.4:
+    resolution: {integrity: sha512-Q0MTapapFAG993+dx8lNw33X6P/6EbFr31yNymJHq56fNc6dODyRm8tWyRnGxuC74lyl1iCRMV6nQCGQsfVNKg==}
+    dev: false
+
+  /openapi3-ts@4.1.2:
+    resolution: {integrity: sha512-B7gOkwsYMZO7BZXwJzXCuVagym2xhqsrilVvV0dnq2Di4+iLUXKVX9gOK23ZqaAHZOwABXN0QTdW8QnkUTX6DA==}
+    dependencies:
+      yaml: 2.4.2
+    dev: false
+
+  /typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: false
+
+  /yaml@2.4.2:
+    resolution: {integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==}
+    engines: {node: '>= 14'}
+    hasBin: true
+    dev: false
