@@ -7,7 +7,9 @@ export default async function Home() {
     headers: { 'x-apikey': process.env.OPENINT_API_KEY },
   })
   const endUserToken = await serverOpenInt
-    .POST('/connect/token', { body: { endUserId: 'test' } })
+    .POST('/connect/token', {
+      body: { endUserId: 'test', validityInSeconds: 30 * 24 * 60 * 60 }, // 30 days..
+    })
     .then((r) => r.data.token)
 
   return (

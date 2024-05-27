@@ -5,4 +5,4 @@ const serverOpenInt = initOpenIntSDK({
 })
 const endUserToken = serverOpenInt
   .POST('/connect/token', { body: { endUserId: 'test' } })
-  .then((r) => r.data.token)
+  .then((r) => console.log(r.data.token))
