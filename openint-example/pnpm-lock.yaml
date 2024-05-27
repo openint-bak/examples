@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@openint/connect':
+    specifier: ^0.1.12
+    version: 0.1.12(react@18.3.1)
+  '@opensdks/sdk-openint':
+    specifier: ^0.0.4
+    version: 0.0.4(@opensdks/runtime@0.0.19)
   next:
     specifier: 14.2.3
     version: 14.2.3(react-dom@18.3.1)(react@18.3.1)
@@ -265,6 +271,36 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
     dev: true
+
+  /@openint/connect@0.1.12(react@18.3.1):
+    resolution: {integrity: sha512-3tth149Qo+aQhEw2iqEUMSncdVPcqE280lEtxBglN/F7H1qy7OJExdw/YkuTRhezRgVv7u5GrO9Q6hHkyXurQQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.3.1
+      zod: 3.22.4
+    dev: false
+
+  /@opensdks/fetch-links@0.0.18:
+    resolution: {integrity: sha512-EhBj92wLXoj3pF4ERxzoEhAlwlefIzQ31At0zaksSbA9zqMlod9DyfypQRX/6J8w4iZzraV33BtFEk7l98nsLA==}
+    dev: false
+
+  /@opensdks/runtime@0.0.19:
+    resolution: {integrity: sha512-9rPrPDHS+PRVKOWXbdYEtys/4uHeVzitQgR0QVSWtMFOn6FOY8VxMGvem0TGJwHf4EPecejoWF8NuNwUATmbeA==}
+    dependencies:
+      '@opensdks/fetch-links': 0.0.18
+      openapi-fetch: 0.8.1
+      openapi-typescript-helpers: 0.0.4
+      openapi3-ts: 4.1.2
+    dev: false
+
+  /@opensdks/sdk-openint@0.0.4(@opensdks/runtime@0.0.19):
+    resolution: {integrity: sha512-+/fTdh8KxyA7vtSMMwzPEcyOEij5HBS17RARPEP5BI8Kl5hp5XLvPWWwxA6ubJKK45vccJFsgviRuFherauLHA==}
+    peerDependencies:
+      '@opensdks/runtime': 0.0.19
+    dependencies:
+      '@opensdks/runtime': 0.0.19
+    dev: false
 
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -2048,6 +2084,22 @@ packages:
       wrappy: 1.0.2
     dev: true
 
+  /openapi-fetch@0.8.1:
+    resolution: {integrity: sha512-xmzMaBCydPTMd0TKy4P2DYx/JOe9yjXtPIky1n1GV7nJJdZ3IZgSHvAWVbe06WsPD8EreR7E97IAiskPr6sa2g==}
+    dependencies:
+      openapi-typescript-helpers: 0.0.4
+    dev: false
+
+  /openapi-typescript-helpers@0.0.4:
+    resolution: {integrity: sha512-Q0MTapapFAG993+dx8lNw33X6P/6EbFr31yNymJHq56fNc6dODyRm8tWyRnGxuC74lyl1iCRMV6nQCGQsfVNKg==}
+    dev: false
+
+  /openapi3-ts@4.1.2:
+    resolution: {integrity: sha512-B7gOkwsYMZO7BZXwJzXCuVagym2xhqsrilVvV0dnq2Di4+iLUXKVX9gOK23ZqaAHZOwABXN0QTdW8QnkUTX6DA==}
+    dependencies:
+      yaml: 2.4.2
+    dev: false
+
   /optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
     engines: {node: '>= 0.8.0'}
@@ -2832,9 +2884,12 @@ packages:
     resolution: {integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==}
     engines: {node: '>= 14'}
     hasBin: true
-    dev: true
 
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false
